@@ -40,9 +40,9 @@ public class BrowserUtils {
 		wait.until(ExpectedConditions.textToBePresentInElement(element, text));
 	}
 	
-	public void waitForAllElementsToBeVisible(List<WebElement> element) {
+	public void waitForAllElementsToBeVisible(WebElement searchBox) {
 		wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOfAllElements(element));
+		wait.until(ExpectedConditions.visibilityOfAllElements(searchBox));
 	}
 	
 	//This method tells the driver to wait until an element is clickable
